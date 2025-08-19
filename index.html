@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    spacing: {
+                        13: '3.25rem'
+                    },
+                    fontFamily: {
+                        inter: ['Inter'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'goyang' : 'goyang 1s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        goyang: {
+                            '0% , 100%': { transform: 'rotate(-10deg)'},
+                            '50%': { transform: 'rotate(10deg)'}
+                        },
+                    }
+                }
+            }
+        };
+    </script>
+    <title>Belajar Tailwind</title>
+    <style type="text/tailwindcss">
+        /* find element with id toggle till the label element then if toggle or label is got clicked or checked then add translate-x-3 */
+    #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-3;
+            /* transform: translateX(0.75rem); */
+        }
+
+    .dark {
+        background-color: #111827; /* Tailwind's gray-900 */
+        color: #f9fafb; /* Tailwind's gray-50 */
+        }
+    
+    /* Optional: Override specific dark mode colors */
+    .dark .bg-slate-300 {
+        background-color: #374151; /* Tailwind's gray-700 */
+        }
+    
+    .dark .text-slate-700 {
+        color: #d1d5db; /* Tailwind's gray-300 */
+         }
+
+    </style>
+    <!-- font google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="mb-10 mt-8 p-4 font-inter max-w-4xl mx-auto">
+        <h1 class="mb-4 text-8xl font-bold text-center my-10">Mari Belajar Tailwind</h1>
+        <div class="mb-4 text-lg text-gray-500">By <a href="#" class="text-gray-700 font-semibold"> yamzal,</a> 17
+            Agustus 2025</div>
+        <p class="mb-4 bg-gradient-to-r from-indigo-200 to-green-200">Lorem ipsum dolor sit, amet <a href="#"
+                class="underline font-semibold text-blue-600">consectetur</a> adipisicing elit.
+            Sunt neque delectus quas blanditiis ducimus! Qui perspiciatis dolorem iste asperiores veniam!</p>
+        <p class="mb-4 bg-gradient-to-r from-indigo-200 via-yellow-500 to-green-200">Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Nisi eos cupiditate amet optio laboriosam
+            veniam atque sunt voluptatibus commodi deserunt in quis reiciendis, quos eaque a ad ut voluptas nihil
+            quaerat blanditiis quam. Ipsam voluptatibus
+            qui aperiam incidunt? Molestias natus dignissimos iusto fugit. Enim voluptas, inventore earum explicabo
+            at non.</p>
+        <blockquote class="mb-4 italic font-light text-xl">"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aliquam officia velit culpa maxime perspiciatis id vel perferendis
+            expedita ad? Corporis praesentium corrupti quisquam, ratione magnam quaerat ullam error non nulla."
+        </blockquote>
+    </section>
+
+    <div class="max-w-xl h-96 bg-[#bada55] mx-auto [42px] overflow-y-scroll bg-scroll bg-cover"
+        style="background-image: url('./img/01.jpg');">
+        <p class="p-5 text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minima exercitationem, repudiandae sit maxime
+            tenetur temporibus iusto soluta voluptatum ducimus modi repellendus non. Ipsa temporibus velit magni vel
+            repudiandae,
+            fugit esse? Dignissimos ipsa magnam necessitatibus impedit quas optio asperiores porro neque ad et suscipit
+            rem, dolorem quasi
+            reprehenderit, nobis sapiente temporibus at quos quaerat beatae aliquam? Veritatis aliquid repellendus ut
+            iusto, ipsam impedit
+            iure atque, ex, vel deleniti ullam numquam autem eos asperiores accusamus commodi! Ipsam, aliquam maxime
+            repellat nulla veritatis
+            at et dolor unde, quis corrupti accusamus doloremque magnam commodi quaerat, ad optio accusantium. Quaerat
+            ad ipsam doloribus
+            quos itaque nemo a. Voluptates incidunt illum adipisci expedita eligendi quaerat harum vitae nihil, alias
+            mollitia consequatur
+            blanditiis repellat explicabo placeat labore hic quidem inventore earum totam quod quas minus! Nostrum
+            doloremque unde iure ipsam,
+            impedit deserunt possimus blanditiis nobis temporibus expedita dolor. Repudiandae, neque. Accusantium magni
+            dolore necessitatibus,
+            culpa officiis illum ipsa tempore harum? Aut provident, quasi voluptatibus odio ex veritatis accusantium
+            nesciunt accusamus aliquam maiores
+            ipsum possimus quisquam hic perspiciatis eum maxime asperiores inventore? Deserunt architecto nihil dolores
+            id, autem quam, voluptatum
+            adipisci eum labore pariatur ipsa, sunt nam vero eius ab aliquid ipsam dolorem maiores ipsum et illum
+            officiis nisi itaque ad! Quidem sit
+            distinctio blanditiis assumenda recusandae itaque iste quia! In dolores nihil perferendis at deleniti
+            dolorum, ex ullam inventore hic
+            id debitis sapiente harum ipsum alias odit labore aperiam soluta cum incidunt optio cupiditate quisquam
+            porro vel? Minus ad, cum nemo at eius suscipit atque aliquid tempora laborum rem fugiat tempore iure
+            pariatur similique quis obcaecati esse blanditiis
+        </p>
+    </div>
+
+    <div class="mt-32 max-w-xl h-96 mx-auto bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-lg shadow-slate-500"
+        style="background-image: url(./img/02.jpg);"></div>
+
+    <div class="mt-32 max-w-xl h-96 mx-auto bg-red-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-lg shadow-slate-500 overflow-hidden border-8 bg-blend-overlay"
+        style="background-image: url(./img/1.jpg);">
+        <div class="w-full h-full bg-blue-300 mix-blend-darken"></div>
+    </div>
+
+    <div class="mt-32 max-w-xl h-96 mx-auto bg-red-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-lg shadow-slate-500 overflow-hidden border-8 flex"
+        style="background-image: url(./img/01.jpg);">
+        <div class="w-[200px] h-[200px] bg-white/70 m-auto backdrop-blur-lg rounded-full"></div>
+    </div>
+
+    <hr class="m-20">
+
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer ">
+                <div class="w-4 h-4 bg-white rounded-full 
+                rounded-circle toggle-circle"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">dark</span>
+    </div>
+
+    <!-- Button -->
+    <!--  default display button is inline so it's need to be convert to block -->
+    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full
+     text-white font-semibold font-inter block mx-auto
+     hover:bg-sky-600 active:bg-sky-700 focus:ring
+     dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100
+     ">Simpan</button>
+
+    <hr class="m-10">
+
+    <!-- Card -->
+    <div class="max-w-lg my-10 border border-slate rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group ">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white
+        dark:group-hover:text-slate-800
+        ">My Card</h5>
+        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900
+        first-line:uppercase
+        first-line:tracking-widest
+        first-letter:text-7xl
+        first-letter:float-left first-letter:mr-3
+        dark:group-hover:text-slate-800
+        ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis repudiandae delectus deleniti quis quia
+            eaque dolor, saepe rerum unde consectetur vel esse, tempore sequi a suscipit et ducimus? Ratione architecto
+            assumenda vel provident, adipisci inventore? Iure, non molestias illum praesentium vel atque quia quaerat,
+            fugit totam ab minus quibusdam nostrum?</p>
+    </div>
+    <div class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
+        <form action="">
+            <label for="email">
+                <span
+                    class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+                <input type="email" placeholder="masukkan email..." class="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500
+                invalid:text-pink-500
+                invalid:focus:ring-pink-700
+                invalid:focus:border-pink-700">
+                <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+            </label>
+        </form>
+    </div>
+
+    <hr class="my-20">
+
+    <div class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:rotate-180 hover:bg-pink-500 transition origin-top-left">
+    </div>
+
+    <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 group">
+        <div class="w-full h-full bg-sky-500 group-hover:rotate-180 transition origin-top-left "></div>
+    </div>    
+
+     <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 rounded-lg shadow-lg hover:animate-spin-slow">
+    </div>
+
+    <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 rounded-full shadow-lg hover:animate-ping">
+    </div>
+
+
+    <div class="w-40 h-40 bg-sky-500 mx-auto mt-20 rounded-full shadow-lg hover:animate-bounce">
+    </div>
+
+    <div class="w-40 h-40 bg-sky-500 mx-auto mt-20 rounded-lg shadow-lg hover:animate-goyang">
+    </div>
+    
+
+    <div class="mb-96"></div>
+
+    <script>
+        // const checkbox = document.querySelector('#toggle');
+        // const html = document.querySelector('html');
+
+        // checkbox.addEventListener('click', function(){
+        //     checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        // });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkbox = document.querySelector('#toggle');
+            const html = document.querySelector('html');
+
+            checkbox.addEventListener('click', function () {
+                checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
