@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script> 
+
+<script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -133,6 +135,7 @@
 
 
 <!-- ----- PSEUDO Class & Dark Mode ------ -->
+ <section id="darkMode">
     <div class="flex justify-center">
         <span class="text-sm text-slate-500 mr-2">light</span>
         <input type="checkbox" id="toggle" class="hidden">
@@ -144,6 +147,7 @@
         </label>
         <span class="text-sm text-slate-500 ml-2">dark</span>
     </div>
+    </section>
 
     <!-- Button -->
     <!--  default display button is inline so it's need to be convert to block -->
@@ -156,6 +160,7 @@
     <hr class="m-10">
 
     <!-- Card -->
+    <section id="card">
     <div class="max-w-lg my-10 border border-slate rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group ">
         <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white
         dark:group-hover:text-slate-800
@@ -184,6 +189,7 @@
             </label>
         </form>
     </div>
+    </section>
 
     <hr class="my-20">
 
@@ -194,23 +200,19 @@
     <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 group">
         <div class="w-full h-full bg-sky-500 group-hover:rotate-180 transition origin-top-left "></div>
     </div>    
-
      <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 rounded-lg shadow-lg hover:animate-spin-slow">
     </div>
-
     <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 rounded-full shadow-lg hover:animate-ping">
     </div>
-
-
     <div class="w-40 h-40 bg-sky-500 mx-auto mt-20 rounded-full shadow-lg hover:animate-bounce">
     </div>
-
     <div class="w-40 h-40 bg-sky-500 mx-auto mt-20 rounded-lg shadow-lg hover:animate-goyang">
     </div>
     
     <hr class="my-20 border-t-4">
 
     <!-- ----- Layouting ----- -->
+    <section>
     <div class="container mx-auto">
         <div class="border rounded-lg shadow-lg p-10 relative">
             <div class="w-10 h-10 bg-sky-200 rounded-full flex fixed bottom-5 right-5 cursor-pointer">
@@ -231,11 +233,13 @@
         <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
         <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
     </div>
-    
+    </section>
+
      <hr class="my-20 border-t-4">
 
     <!-- ----- Responsive Design ----- -->
      <!-- sm:max-w-xl is refers to mobile first (680px) so make the content more wider in that reso bcs it's make more readable when the screen is to small -->
+    <section id="responsive">
      <div class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
         <div class="lg:p-12 lg:flex-1">        
             <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl">
@@ -254,11 +258,13 @@
              <img src="img/1.jpg" alt="laptop" class="object-cover rounded-l-full">
            </div>
      </div>
+    </section>
 
      <hr class="my-20 border-t-4">
 
      <!-- ----- Flexbox Layout -----  -->
      <!-- Gallery -->
+      <section id="flexbox">
      <h2 class="mt-24 mb-10 text-center font-bold text-3xl text-slate-700">My Gallery</h2>
       <div class="container mx-auto px-6 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly">
         <!-- item gallery -->
@@ -286,6 +292,7 @@
             </div>
         </div>
         <!-- item gallery -->
+        
         <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
             <img src="https://picsum.photos/600/400" alt="Image Caption" class="w-full">
             <div class="px-6 py-4">
@@ -310,11 +317,13 @@
             </div>
         </div>
       </div>
+      </section>
 
       <hr class="my-20 border-t-4">
 
       <!-- ----- Grid Layout ----- -->
-      <div class="mt-64 p-2 font-inter grid grid-cols-2 gap-2 md:grid-cols-4 md:p-4">
+    <section id="grid">
+      <div class="mt-14 p-2 font-inter grid grid-cols-2 gap-2 md:grid-cols-4 md:p-4">
         <h2 class="h-15 text-xl font-semibold text-slate-700 lg:flex lg:mx-auto md:mx-auto underline-offset-8"><span class="self-center ">Welcome to Yamzal Code</span></h2>
         <div class="h-15 text-lg font-bold text-slate-600 lg:flex lg:mx-auto md:mx-auto md:flex md:align-center "><span class="self-center  ">@yamzal</span></div>
 
@@ -358,8 +367,9 @@
             <!-- images items -->
              <div class="w-full h-full bg-[url('/img/01.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
         </div>
-
       </div>
+      </section>
+      
 
 
 
