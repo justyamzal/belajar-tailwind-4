@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -57,13 +57,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- ----- BASIC UTILITY ----- -->
     <section class="mb-10 mt-8 p-4 font-inter max-w-4xl mx-auto">
         <h1 class="mb-4 text-8xl font-bold text-center my-10">Mari Belajar Tailwind</h1>
-        <div class="mb-4 text-lg text-gray-500">By <a href="#" class="text-gray-700 font-semibold"> yamzal,</a> 17
+        <div class="mb-4 text-lg text-gray-500 my-20">By <a href="#" class="text-gray-700 font-semibold"> yamzal,</a> 17
             Agustus 2025</div>
         <p class="mb-4 bg-gradient-to-r from-indigo-200 to-green-200">Lorem ipsum dolor sit, amet <a href="#"
                 class="underline font-semibold text-blue-600">consectetur</a> adipisicing elit.
@@ -129,6 +131,8 @@
 
     <hr class="m-20">
 
+
+<!-- ----- PSEUDO Class & Dark Mode ------ -->
     <div class="flex justify-center">
         <span class="text-sm text-slate-500 mr-2">light</span>
         <input type="checkbox" id="toggle" class="hidden">
@@ -183,6 +187,7 @@
 
     <hr class="my-20">
 
+    <!-- ----- Transform, Transition, Animation ----- -->
     <div class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:rotate-180 hover:bg-pink-500 transition origin-top-left">
     </div>
 
@@ -203,6 +208,160 @@
     <div class="w-40 h-40 bg-sky-500 mx-auto mt-20 rounded-lg shadow-lg hover:animate-goyang">
     </div>
     
+    <hr class="my-20 border-t-4">
+
+    <!-- ----- Layouting ----- -->
+    <div class="container mx-auto">
+        <div class="border rounded-lg shadow-lg p-10 relative">
+            <div class="w-10 h-10 bg-sky-200 rounded-full flex fixed bottom-5 right-5 cursor-pointer">
+                <a href="#" class="text-xl m-auto">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+            <img src="./img/1.jpg" alt="laptop" width="150px" class="float-left mr-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem praesentium ab, minus magni pariatur eligendi iste, quis id asperiores dolore, nobis similique error quidem voluptates veritatis eum perferendis. Atque illo accusamus obcaecati, dicta quod nihil dignissimos ducimus ad minus aut molestias culpa impedit nesciunt consequuntur, neque voluptate porro ab eligendi.</p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto border rounded-lg shadow-lg p-10 mt-20 columns-3">
+        <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
+        <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
+        <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
+        <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
+        <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
+        <img src="https://picsum.photos/600/400" alt="Image" class="mb-4">
+    </div>
+    
+     <hr class="my-20 border-t-4">
+
+    <!-- ----- Responsive Design ----- -->
+     <!-- sm:max-w-xl is refers to mobile first (680px) so make the content more wider in that reso bcs it's make more readable when the screen is to small -->
+     <div class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+        <div class="lg:p-12 lg:flex-1">        
+            <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl">
+            Yam<span class="text-sky-500">zal</span> 
+            </h3>
+            <!-- medium screen  -->
+            <img src="img/1.jpg" alt="laptop" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden">
+            <h2 class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl">Mari Belajar Tailwinds Bersama Yamzal</h2>
+            <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit animi sit blanditiis error sint quos, quasi facilis repellendus labore accusamus officia. Aliquid, odit, quam veniam sit animi dignissimos quod architecto accusantium non nihil a quia recusandae molestias mollitia necessitatibus tempora molestiae, iste officiis adipisci quasi ea esse laborum deserunt.</p>
+            <div class="mt-4 sm:mt-6">
+                <a href="" class="inline-block px-5 py-3 bg-red-600 text-white  rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm text-sm:text-base">Subscribe Channel Youtube</a>
+            </div>
+        </div>
+        <!-- images for large screen -->
+            <div class="hidden lg:block lg:w-1/2">
+             <img src="img/1.jpg" alt="laptop" class="object-cover rounded-l-full">
+           </div>
+     </div>
+
+     <hr class="my-20 border-t-4">
+
+     <!-- ----- Flexbox Layout -----  -->
+     <!-- Gallery -->
+     <h2 class="mt-24 mb-10 text-center font-bold text-3xl text-slate-700">My Gallery</h2>
+      <div class="container mx-auto px-6 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly">
+        <!-- item gallery -->
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://picsum.photos/600/400" alt="Image Caption" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut molestiae quae, voluptas quos repudiandae cumque numquam dicta possimus officia!</p>
+            </div>
+        </div>
+        <!-- item gallery -->
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://picsum.photos/600/400" alt="Image Caption" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut molestiae quae, voluptas quos repudiandae cumque numquam dicta possimus officia!</p>
+            </div>
+        </div>
+        <!-- item gallery -->
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://picsum.photos/600/400" alt="Image Caption" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut molestiae quae, voluptas quos repudiandae cumque numquam dicta possimus officia!</p>
+            </div>
+        </div>
+        <!-- item gallery -->
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://picsum.photos/600/400" alt="Image Caption" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut molestiae quae, voluptas quos repudiandae cumque numquam dicta possimus officia!</p>
+            </div>
+        </div>
+        <!-- item gallery -->
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://picsum.photos/600/400" alt="Image Caption" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut molestiae quae, voluptas quos repudiandae cumque numquam dicta possimus officia!</p>
+            </div>
+        </div>
+        <!-- item gallery -->
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://picsum.photos/600/400" alt="Image Caption" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut molestiae quae, voluptas quos repudiandae cumque numquam dicta possimus officia!</p>
+            </div>
+        </div>
+      </div>
+
+      <hr class="my-20 border-t-4">
+
+      <!-- ----- Grid Layout ----- -->
+      <div class="mt-64 p-2 font-inter grid grid-cols-2 gap-2 md:grid-cols-4 md:p-4">
+        <h2 class="h-15 text-xl font-semibold text-slate-700 lg:flex lg:mx-auto md:mx-auto underline-offset-8"><span class="self-center ">Welcome to Yamzal Code</span></h2>
+        <div class="h-15 text-lg font-bold text-slate-600 lg:flex lg:mx-auto md:mx-auto md:flex md:align-center "><span class="self-center  ">@yamzal</span></div>
+
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+            <div class="w-full h-full bg-[url('/img/1.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/2.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/3.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/4.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/5.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/6.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/7.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/8.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative">
+            <!-- images items -->
+             <div class="w-full h-full bg-[url('/img/01.jpg')] bg-cover bg-center absolute group-hover:scale-125"></div>
+        </div>
+
+      </div>
+
+
 
     <div class="mb-96"></div>
 
